@@ -6,7 +6,10 @@ const port = 3000;
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
-    res.end(`Удавсь на всеє зле проворний,<br>
+    res.end(
+	`Еней був парубок моторний<br/>
+	І хлопець хоть куди козак,<br/>
+    Удавсь на всеє зле проворний,<br>
     Завзятіший од всіх бурлак.<br><br>
     Но греки, як спаливши Трою,<br/>
 	Зробили з неї скирту гною,<br/><br>
