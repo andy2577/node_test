@@ -10,6 +10,4 @@ const server = http.createServer((req, res) => {
     Розкудкудакалась, як квочка, — `);
 });
 
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-});
+server.listen(process.env.PORT);
