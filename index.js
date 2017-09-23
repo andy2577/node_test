@@ -1,7 +1,7 @@
 const http = require('http');
 
 const hostname = '127.0.0.1';
-const port = 3000;
+const port = process.env.PORT||3000;
 
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => {
     Він, взявши торбу, тягу дав;<br/>
     Забравши деяких троянців,<br/><br>
 	Осмалених,як гиря, ланців,<br>
-	Пятами з Трої накивав<br><br><br>
+	Пятами з Трої накивав<br><br>
 	Троянців насажавши повні,<br>
     І куди очі почухрав.<br><br>
     Но зла Юнона, суча дочка,<br>
@@ -25,4 +25,6 @@ const server = http.createServer((req, res) => {
 	Давно уже вона хотіла<br><br>`);
 });
 
-server.listen(process.env.PORT);
+server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+  });
